@@ -64,7 +64,8 @@ def search_news(keyword: str) -> StringToolOutput:
 
     return parsed_articles
 
-workflow = AgentWorkflow(name="Smart assistant")
+workflow = AgentWorkflow(name="Smart Disaster EarthGuard AI Agent")
+
 workflow.add_agent(
     name="PandemicAnalyzer",
     role="A pandemic analyst. you should analyze the pandemic situation and provide information.",

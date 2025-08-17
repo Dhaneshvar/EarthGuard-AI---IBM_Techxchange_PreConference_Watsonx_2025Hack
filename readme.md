@@ -1,15 +1,16 @@
 # 🌐 EarthGurard AI - IBM Watson Powered Agentic AI Chatbot
 
 ## 🚨 Problem
-Disaster information is scattered across multiple sources, making it difficult for citizens and organizations to **get real-time insights**, **alerts**, and **actionable updates**.  
-Traditional systems lack **intelligent interactions** and **proactive responses**.
+- Disaster information is scattered across multiple sources, making it difficult for citizens and organizations to **get real-time insights**, **alerts**, and **actionable updates**.  
+
+- Traditional systems lack **intelligent interactions** and **proactive responses**.
 
 ---
 
 ## ✅ Solution
-We built an **IBM Watson powered Agentic AI chatbot** using **Agentic AI frameworks (BeeFramework by IBM)**.  
-It provides **real-time disaster updates**, **alerts**, and a **user-friendly dashboard**.  
-The chatbot not only answers queries but also proactively suggests insights and provides a collaborative platform for citizens, responders, and authorities.
+- We built an **IBM Watson powered Agentic AI chatbot** using **Agentic AI frameworks (BeeFramework by IBM)**.  
+- It provides **real-time disaster updates**, **alerts**, and a **user-friendly dashboard**.  
+- The chatbot not only answers queries but also proactively suggests insights and provides a collaborative platform for citizens, responders, and authorities.
 
 ---
 
@@ -51,13 +52,24 @@ The chatbot not only answers queries but also proactively suggests insights and 
 
 ## 📸 Website Preview
 
-| Page Name     | Description                                      |
-|---------------|--------------------------------------------------|
-| **Landing Page** | Overview of disaster insights & AI-powered alerts |
-| **Chat Page**    | IBM Watson-powered chatbot with real-time answers |
-| **Dashboard**    | Live visualization of disaster data & alerts      |
-| **Team Page**    | Meet the contributors and collaborators           |
-| **Alerts Page**  | Notifications & emergency updates                 |
+| Page Name       | Preview                                  | Description                                      |
+|-----------------|------------------------------------------|--------------------------------------------------|
+| **Landing Page** | ![Landing Page](./Images/LandingPage.png)          | Overview of disaster insights & AI-powered alerts |
+| **Chat Page**    | ![Agentic Chat](./Images/Chatbot.png)                | IBM Watson-powered chatbot with real-time answers |
+| **Dashboard**    | ![Dashboard](images/dashboard.png)      | Live visualization of disaster data & alerts      |
+| **Team Page**    | ![Team](images/teammembers.png)                | Meet the contributors and collaborators           |
+| **Alerts Page**  | ![Alerts](images/livealerts.png)            | Notifications & emergency updates                 |
+
+---
+
+
+## 🖥️ Backend Code Preview
+
+| Component        | Preview Image                          | Description                          |
+|------------------|----------------------------------------|--------------------------------------|
+| **Agent Code**   | ![Agent Code](Images/Bee-Workflow_Agents.png)   | Core logic for multi-agent system and workflows |
+| **Tool Screenshot** | ![Tool](Images/CustomAgentTool.png) | Interfaces & utilities enabling real-time disaster alerts |
+
 
 ---
 
@@ -72,8 +84,8 @@ You can watch the live demo on YouTube:
 ---
 
 ## 👨‍💻 Team
-- Team Member 1 – AI/ML Engineer  
-- Team Member 2 – Frontend Developer  
+- Team Member 1 – [Dhaneshvar](https://www.linkedin.com/in/dhaneshvar/) - Gen AI Engineer  & Frontend Developer | 
+- Team Member 2 – [Kalaivani](https://www.linkedin.com/in/kalaivani-mahalatchoumy/) - Gen AI and Full Stack Developer
 
 ---
 
@@ -91,7 +103,7 @@ Frontend (React + TypeScript)
 
 ```bash
 cd frontend
-npm install
+npm run dev
 npm start
 ```
 
@@ -106,7 +118,10 @@ AI-powered predictive modeling for risk analysis
 # Sample Question to be asked
 
     What’s happening globally with earthquakes this week?
+
     What disasters are trending in Japan?
+    
     Is there any earthquake news near India?
+    
     Any latest disaster alerts in the US right now?
 

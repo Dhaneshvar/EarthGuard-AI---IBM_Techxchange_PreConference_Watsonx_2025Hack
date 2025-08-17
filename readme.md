@@ -13,6 +13,23 @@ The chatbot not only answers queries but also proactively suggests insights and 
 
 ---
 
+# Objective
+- Generate a **structured, bullet-style summary** for any disaster or pandemic query, with the option to **download a report**.  
+
+- **Data fusion sources include:**
+  - 🌐 **Web Search (DuckDuckGoSearch):** Capture the latest online updates.  
+  - 📖 **Wikipedia:** Provide background and reference material.  
+  - 📰 **NewsAPI:** Deliver current trending news articles.  
+  - 💬 **SocialMediaTool:** Stream live information from social media.  
+  - ☁️ **OpenMeteo:** Supply real-time weather conditions.  
+
+- Provide **alerting and dashboard views** to enable rapid triage, customized by role:  
+  - 👤 Citizens  
+  - 🏥 NGOs  
+  - 🛠️ Administrators
+
+---
+
 ## 🛠️ Tech Stack
 - **IBM Watson** + **Agentic AI Framework (BeeFramework from IBM)**
 - **Backend:** Flask (Python)
@@ -47,9 +64,10 @@ The chatbot not only answers queries but also proactively suggests insights and 
 ## 🎥 Live Demo
 You can watch the live demo on YouTube:  
 
-[![Watch Live Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)  
+[![Watch Live Demo](https://img.youtube.com/vi/RxRqzCwhqeE/0.jpg)](https://youtu.be/RxRqzCwhqeE)  
 
 *(Click the image to open the live demo video on YouTube)*
+
 
 ---
 

@@ -7,6 +7,7 @@ from beeai_framework.tools.weather import OpenMeteoTool
 from beeai_framework.workflows.agent import AgentWorkflow, AgentWorkflowInput
 from beeai_framework.tools.search.duckduckgo import DuckDuckGoSearchTool
 from beeai_framework.middleware.trajectory import GlobalTrajectoryMiddleware
+from beeai_framework.tools import StringToolOutput, tool
 
 app = Flask(__name__)
 CORS(app)
@@ -15,11 +16,53 @@ CORS(app)
 llm = ChatModel.from_name(
     "watsonx:ibm/granite-3-8b-instruct",
     settings={
-        "project_id": "",
-        "api_key": "",
+        "project_id": "3",
+        "api_key": "9",
         "base_url": "https://us-south.ml.cloud.ibm.com",
     },
 )
+
+
+@tool(description="You are a news search tool. you have to extract keyword from the expression and search news related to it.")
+def search_news(keyword: str) -> StringToolOutput:
+    from newsapi import NewsApiClient
+    # Init
+    newsapi = NewsApiClient(api_key='b769be7ba87a450f89104326b356f18b')
+
+    print(f"Searching news for keyword: {keyword}")
+    all_articles = newsapi.get_everything(q=keyword,
+                                        from_param='2025-07-16',
+                                        to='2025-08-17',
+                                        language='en',
+                                        sort_by='relevancy',
+                                        page=1
+    )
+    
+    print(all_articles)
+
+    # Extract only top 5 articles
+    articles = all_articles.get("articles", [])[:5]
+
+    # Store required fields as objects (dicts)
+    parsed_articles = []
+    for article in articles:
+        parsed_articles.append({
+            "title": article.get("title"),
+            "description": article.get("description"),
+            "url": article.get("url"),
+            "urlToImage": article.get("urlToImage"),
+            # "content": article.get("content"),
+        })
+
+    # Print results
+    for idx, a in enumerate(parsed_articles, 1):
+        print(f"\nArticle {idx}:")
+        print(f"Title: {a['title']}")
+        print(f"Description: {a['description']}")
+        print(f"URL: {a['url']}")
+        print(f"Image: {a['urlToImage']}")
+
+    return parsed_articles
 
 workflow = AgentWorkflow(name="Smart assistant")
 workflow.add_agent(
@@ -41,6 +84,23 @@ workflow.add_agent(
     role="you have to search explictly on news websites, Pandemic and disaster related websites and gather information.",
     instructions="You can combine disparate information into a final coherent summary. Always provide in structured bulleted format.",
     tools=[DuckDuckGoSearchTool()],
+    llm=llm,
+)
+
+# Custom Tool for news search
+workflow.add_agent(
+        name="NewsSearcher",
+        role="A news search agent.",
+        instructions="you have to use this news seach tool with main keyword from the user given prompt. eg. 'disaster', 'pandemic', 'emergency'. Provide output in well structured format only finally",
+        tools=[search_news],
+        llm=llm,
+)
+
+workflow.add_agent(
+    name="SocialMediaAnalyzer",
+    role="A social media analyst.",
+    instructions="You analyze social media trends and provide insights.",
+    tools=[SocialMediaSearchTool()],
     llm=llm,
 )
 

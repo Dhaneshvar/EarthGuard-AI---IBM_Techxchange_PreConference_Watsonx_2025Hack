@@ -1,0 +1,52 @@
+# ======================
+# Global
+# ======================
+.DS_Store
+*.log
+*.env
+*.env.local
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+.vscode/
+.idea/
+dist/
+build/
+node_modules/
+coverage/
+*.lock
+
+# ======================
+# Backend (Flask)
+# ======================
+/Backend/__pycache__/
+/Backend/*.pyc
+/Backend/instance/
+/Backend/.pytest_cache/
+/Backend/.mypy_cache/
+/Backend/.coverage
+/Backend/htmlcov/
+/Backend/venv/
+/Backend/env/
+/Backend/.env
+
+# ======================
+# Frontend (Vite + React + TS)
+# ======================
+/Frontend/node_modules/
+/Frontend/dist/
+/Frontend/.vite
+/Frontend/.env
+/Frontend/.env.local
+/Frontend/.env.production
+/Frontend/.env.development
+/Frontend/.eslintcache
+/Frontend/coverage/
+/Frontend/.turbo/
+/Frontend/.parcel-cache/
+/Frontend/.cache
+/Frontend/yarn-error.log
+/Frontend/pnpm-lock.yaml
+/Frontend/package-lock.json

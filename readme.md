@@ -29,7 +29,7 @@
   - 🏥 NGOs  
   - 🛠️ Administrators
 
----
+
 
 ## 🛠️ Tech Stack
 - **IBM Watson** + **Agentic AI Framework (BeeFramework from IBM)**
@@ -38,7 +38,7 @@
 - **Database & APIs:** Integrated with disaster/news feeds
 - **Deployment:** Containerized & cloud-ready
 
----
+
 
 ## 🚀 Features
 - 📊 **Live Dashboard** with real-time alerts  
@@ -46,9 +46,8 @@
 - 🏠 **Landing Page** with disaster insights  
 - 👥 **Team Members Section**  
 - 🚨 **Real-time Alerts & Notifications**  
-- 📡 **Streaming Support (YouTube Live Integration)**  
 
----
+
 
 ## 📸 Website Preview
 
@@ -82,9 +81,12 @@ You can watch the live demo on YouTube:
 
 
 ---
+## PowerPoint
+You can view the PowerPoint presentation here: [EarthGurard AI Presentation](./Powerpoint/EarthGuardAI.pptx)
+
 
 ## 👨‍💻 Team
-- Team Member 1 – [Dhaneshvar](https://www.linkedin.com/in/dhaneshvar/) - Gen AI Engineer  & Frontend Developer | 
+- Team Member 1 – [Dhaneshvar](https://www.linkedin.com/in/dhaneshvar/) - Gen AI Engineer  & Frontend Developer
 - Team Member 2 – [Kalaivani](https://www.linkedin.com/in/kalaivani-mahalatchoumy/) - Gen AI and Full Stack Developer
 
 ---
@@ -93,7 +95,7 @@ You can watch the live demo on YouTube:
 
 ### Backend (Flask)
 ```bash
-cd backend
+cd Backend
 pip install -r requirements.txt
 python app.py
 ```
@@ -102,12 +104,12 @@ python app.py
 Frontend (React + TypeScript)
 
 ```bash
-cd frontend
+cd Frontend
+npm install
 npm run dev
-npm start
 ```
 
-# Future Scope
+## Future Scope
 
 Adding multi-language support 🌍
 
@@ -124,4 +126,12 @@ AI-powered predictive modeling for risk analysis
     Is there any earthquake news near India?
     
     Any latest disaster alerts in the US right now?
+
+# Open Contribution (Available)
+
+If you have similar idea or any other feature you would like to add, please feel free to open a pull request or create an issue
+
+# License
+
+This project is for educational, hackathon and demonstration purposes only.
 

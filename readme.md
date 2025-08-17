@@ -56,9 +56,9 @@
 |-----------------|------------------------------------------|--------------------------------------------------|
 | **Landing Page** | ![Landing Page](./Images/LandingPage.png)          | Overview of disaster insights & AI-powered alerts |
 | **Chat Page**    | ![Agentic Chat](./Images/Chatbot.png)                | IBM Watson-powered chatbot with real-time answers |
-| **Dashboard**    | ![Dashboard](images/dashboard.png)      | Live visualization of disaster data & alerts      |
-| **Team Page**    | ![Team](images/teammembers.png)                | Meet the contributors and collaborators           |
-| **Alerts Page**  | ![Alerts](images/livealerts.png)            | Notifications & emergency updates                 |
+| **Dashboard**    | ![Dashboard](Images/Dashboard.png)      | Live visualization of disaster data & alerts      |
+| **Team Page**    | ![Team](Images/TeamMembers.png)                | Meet the contributors and collaborators           |
+| **Alerts Page**  | ![Alerts](Images/LiveAlerts.png)            | Notifications & emergency updates                 |
 
 ---
 
